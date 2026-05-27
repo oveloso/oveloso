@@ -14,6 +14,15 @@ Trabalho na junção de **backend, automação e IA**: pipelines serverless que 
 
 Aprofundando backend e sistemas distribuídos em Python, construindo em AWS serverless.
 
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/output/github-snake-dark.svg">
+  <img alt="snake comendo o contribution graph" src="https://raw.githubusercontent.com/oveloso/oveloso/output/github-snake.svg">
+</picture>
+
+</div>
+
 ### Projetos
 
 | Projeto | O que resolve | Stack |
