@@ -40,10 +40,6 @@ Backend e automação em **Python**, **Node.js/TypeScript** e **AWS serverless**
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=oveloso&show_icons=true&hide_border=true&theme=tokyonight&hide=contribs&card_width=450" alt="github stats"/>
-
-<br/>
-
 [![CV completo](https://img.shields.io/badge/CV_completo-1F6FEB?style=for-the-badge&logo=readme&logoColor=white)](https://github.com/oveloso/cv)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-veloso-pergentino)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:lucasvelosopergentino@gmail.com)
