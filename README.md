@@ -1,19 +1,17 @@
 ### Lucas Velôso Pergentino
 
-**Desenvolvedor Pleno** · Automações, Integrações, IA & APIs · Carapicuíba, SP
+**Automation Engineer** · Carapicuíba, SP
 
-Trabalho com n8n, Make, AWS Lambda, Bitrix24, Dify (RAG + agentes), Python e Next.js.
-Três anos construindo plataformas que ligam CRM, IA e serverless em escala.
+Construo sistemas de automação serverless que integram CRM, provedores de assinatura digital e IA, e os mantenho em produção.
 
-#### Projetos em destaque
+#### Projetos
 
-- **[análise-cidadania-italiana](https://github.com/oveloso/analise-cidadania-italiana)** — triagem documental com RAG + agentes inteligentes (Python · Dify · Next.js · Supabase)
-- **[pipeline-traducao-juramentada](https://github.com/oveloso/pipeline-traducao-juramentada)** — orquestração serverless ligando Bitrix24, S3 e DocuSign (Lambda · API Gateway · Supabase Edge)
-- Mais projetos chegam conforme o inventário AWS é consolidado.
+- **[pipeline-traducao-juramentada](https://github.com/oveloso/pipeline-traducao-juramentada)** — orquestração serverless do CRM à assinatura digital (Lambda · API Gateway · Bitrix24 · BRLex/Autentique)
+- **[analise-cidadania-italiana](https://github.com/oveloso/analise-cidadania-italiana)** — triagem documental com RAG + agentes (Python · Dify · Next.js · Supabase)
 
-#### Stack principal
+#### Stack
 
-`Python` · `Node.js` · `Next.js` · `AWS Lambda` · `API Gateway` · `S3` · `Supabase` · `Bitrix24` · `Dify` · `n8n` · `Make` · `BigQuery`
+`Python` · `Node.js` · `Next.js` · `AWS Lambda` · `API Gateway` · `Supabase` · `Bitrix24` · `Dify` · `Dokploy`
 
 #### Contato
 
