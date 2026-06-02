@@ -3,13 +3,13 @@
 # Lucas Velôso
 **Automation Engineer · Backend**
 
-<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/pipeline.svg" alt="evento percorrendo um pipeline serverless: App, API Gateway, Fila, Lambda, CRM" width="100%">
+<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/architecture.svg" alt="arquitetura serverless event-driven: API Gateway, SQS (com DLQ), Worker Lambda idempotente usando DynamoDB e S3, atualizando o CRM Bitrix24" width="100%">
 
 </div>
 
-Trabalho com **integração entre sistemas** — fazer conversar o que não nasceu para conversar: CRMs, APIs externas, serviços de assinatura, storage. Monto esses fluxos como pipelines serverless na AWS, pensados para aguentar volume e tratar falha de forma controlada. É o que faço de melhor hoje — e o que mais gosto de fazer.
+Conecto sistemas que não foram feitos para conversar. Na prática, são pipelines serverless na AWS ligando CRM, APIs externas, assinatura digital e storage — desenhados para aguentar o pico de volume sem perder um evento nem sobrecarregar o sistema do outro lado. É onde sou mais forte hoje; backend e arquitetura é para onde vou.
 
-Início de carreira, com integrações reais já em produção, indo para full stack.
+Início de carreira, com integrações reais em produção.
 
 ### Projetos
 
