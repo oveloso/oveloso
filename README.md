@@ -5,7 +5,10 @@
 # Lucas Velôso
 **Automation Engineer · Backend**
 
-<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/diagram.svg" alt="arquitetura serverless event-driven: API Gateway, SQS (com DLQ), Worker Lambda idempotente usando DynamoDB e S3, atualizando o CRM via REST" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/diagram-dark.svg">
+  <img alt="arquitetura serverless event-driven: API Gateway, SQS (com DLQ), Worker Lambda idempotente usando DynamoDB e S3, atualizando o CRM via REST" src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/diagram-light.svg" width="100%">
+</picture>
 
 </div>
 
