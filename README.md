@@ -4,8 +4,8 @@
 **Automation Engineer · Backend**
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/diagram-dark.svg">
-  <img alt="arquitetura serverless event-driven: API Gateway, SQS (com DLQ), Worker Lambda idempotente usando DynamoDB e S3, atualizando o CRM via REST" src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/diagram-light.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/flow-dark.svg">
+  <img alt="arquitetura serverless event-driven animada: evento percorre API Gateway, SQS, Worker Lambda (DynamoDB, S3) e CRM; parte falha e cai na DLQ com erro e retry" src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/flow-light.svg" width="100%">
 </picture>
 
 </div>
