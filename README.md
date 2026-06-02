@@ -40,11 +40,11 @@ Início de carreira, com integrações reais em produção.
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/output/pacman-contribution-graph-dark.svg">
-  <img alt="Pac-Man comendo meu histórico de commits — cada célula é um dia de contribuição" src="https://raw.githubusercontent.com/oveloso/oveloso/output/pacman-contribution-graph.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/output/github-snake-dark.svg">
+  <img alt="cobra consumindo meu grid de contribuições, como um worker drenando a fila" src="https://raw.githubusercontent.com/oveloso/oveloso/output/github-snake.svg" width="100%">
 </picture>
 
-<sub><i>cada célula é um dia de commit · os power pellets são os dias de pico</i></sub>
+<sub><i>como o Worker lá em cima — drena o backlog de commits, um por um, sem parar.</i></sub>
 
 </div>
 
