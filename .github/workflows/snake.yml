@@ -4,9 +4,6 @@ on:
   schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   contents: write
@@ -15,15 +12,15 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate snake (monocromático — paleta B&W do perfil)
-        uses: Platane/snk@v3
+      - name: Gera a cobra (paleta âmbar — identidade do perfil)
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg?color_snake=#24292f&color_dots=#ebedf0,#d8dee4,#bac0c6,#8c959f,#57606a
-            dist/github-snake-dark.svg?color_snake=#e6edf3&color_dots=#161b22,#21262d,#30363d,#57606a,#8b949e
+            dist/github-snake.svg?color_snake=#7c3aed&color_dots=#fef3c7,#fde68a,#fcd34d,#f59e0b,#b45309
+            dist/github-snake-dark.svg?color_snake=#a78bfa&color_dots=#2a2007,#6b4f0a,#a3760c,#d99e0b,#ffd23f
 
-      - name: Push to output branch
+      - name: Publica na branch output
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
