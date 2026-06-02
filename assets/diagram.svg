@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="920" height="250" role="img" aria-label="Arquitetura serverless event-driven: webhook entra pelo API Gateway, vai para uma fila SQS (com DLQ), é processado por um Worker Lambda idempotente que usa DynamoDB e S3, e atualiza o CRM Bitrix24 via REST.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="920" height="250" role="img" aria-label="Arquitetura serverless event-driven: webhook entra pelo API Gateway, vai para uma fila SQS (com DLQ), é processado por um Worker Lambda idempotente que usa DynamoDB e S3, e atualiza o CRM via REST.">
   <defs>
     <style>
       .name  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; fill: #c9d1d9; }
@@ -83,17 +83,17 @@
     <text class="cap" x="42" y="42" fill="#8b7355">IDEMPOTENTE</text>
   </g>
 
-  <!-- Bitrix24 CRM -->
+  <!-- CRM -->
   <g transform="translate(700,74)" filter="url(#shadow)">
-    <rect class="node" width="118" height="48" rx="10"/>
+    <rect class="node" width="96" height="48" rx="10"/>
     <g class="ico" transform="translate(15,15)">
       <rect x="1" y="3" width="16" height="13" rx="2"/>
       <circle cx="5.5" cy="8.5" r="2"/>
       <path d="M10 7 L15 7 M10 10.5 L15 10.5 M10 14 L13.5 14"/>
     </g>
-    <text class="name" x="40" y="29">Bitrix24</text>
+    <text class="name" x="40" y="29">CRM</text>
   </g>
-  <text class="cap" x="759" y="138" text-anchor="middle">REST API</text>
+  <text class="cap" x="748" y="138" text-anchor="middle">REST API</text>
 
   <!-- DLQ -->
   <g transform="translate(244,176)" filter="url(#shadow)">

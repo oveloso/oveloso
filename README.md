@@ -3,7 +3,7 @@
 # Lucas Velôso
 **Automation Engineer · Backend**
 
-<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/architecture.svg" alt="arquitetura serverless event-driven: API Gateway, SQS (com DLQ), Worker Lambda idempotente usando DynamoDB e S3, atualizando o CRM Bitrix24" width="100%">
+<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/diagram.svg" alt="arquitetura serverless event-driven: API Gateway, SQS (com DLQ), Worker Lambda idempotente usando DynamoDB e S3, atualizando o CRM via REST" width="100%">
 
 </div>
 
