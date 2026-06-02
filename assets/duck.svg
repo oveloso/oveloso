@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 76" width="88" height="76" role="img" aria-label="pato — marca pessoal (rubber duck debugging)">
+  <defs>
+    <style>
+      .body { fill: #e3873c; }
+      .wing { fill: #c9752c; }
+      .beak { fill: #e8a33e; }
+      .eye  { fill: #161b22; }
+      .water{ stroke: #30363d; stroke-width: 2.5; stroke-linecap: round; fill: none; }
+    </style>
+  </defs>
+
+  <!-- reflexo n'água (sutil, opcional) -->
+  <path class="water" d="M14 66 h60"/>
+
+  <!-- corpo + cauda -->
+  <path class="body" d="M20 44 Q6 40 8 33 Q14 38 24 38 Q30 30 44 30 Q66 30 66 48 Q66 60 46 60 L30 60 Q18 60 20 44 Z"/>
+  <!-- cabeça -->
+  <circle class="body" cx="60" cy="26" r="14"/>
+  <!-- asa -->
+  <path class="wing" d="M34 46 Q46 38 58 46 Q47 53 34 46 Z"/>
+  <!-- bico -->
+  <path class="beak" d="M71 22 Q86 21 86 27 Q86 32 71 30 Q69 26 71 22 Z"/>
+  <!-- olho -->
+  <circle class="eye" cx="64" cy="23" r="2.4"/>
+  <circle cx="64.9" cy="22.2" r="0.8" fill="#ffffff"/>
+</svg>
