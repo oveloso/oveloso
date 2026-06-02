@@ -3,22 +3,26 @@
 # Lucas Velôso
 **Automation Engineer · Backend**
 
+<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/pipeline.svg" alt="evento percorrendo um pipeline serverless: App, API Gateway, Fila, Lambda, CRM" width="100%">
+
 </div>
 
-Desenvolvedor focado em backend e **integração entre sistemas**. O que faço melhor hoje é conectar sistemas que não foram feitos para conversar — CRMs, APIs externas, serviços de assinatura, storage — em pipelines serverless na AWS que aguentam volume e tratam falha de forma controlada.
+Trabalho com **integração entre sistemas** — fazer conversar o que não nasceu para conversar: CRMs, APIs externas, serviços de assinatura, storage. Monto esses fluxos como pipelines serverless na AWS, pensados para aguentar volume e tratar falha de forma controlada. É o que faço de melhor hoje — e o que mais gosto de fazer.
 
-Início de carreira, com integrações reais já em produção. Estou indo mais fundo em **Python** e **JavaScript/TypeScript**, caminhando para full stack — e Go mais à frente.
+Início de carreira, com integrações reais já em produção, indo para full stack.
 
-### O que construí
+### Projetos
 
 - **[serverless-crm-integration](https://github.com/oveloso/serverless-crm-integration)** — integração multi-sistema orientada a eventos na AWS (Lambda, SQS, DynamoDB). Circuit breaker, rate limiter global, idempotência, 400+ testes. *Código real, em TypeScript.*
 - **[analise-cidadania-italiana](https://github.com/oveloso/analise-cidadania-italiana)** — aplicação com IA (RAG + agentes) para triagem de documentação.
 - **[pipeline-traducao-juramentada](https://github.com/oveloso/pipeline-traducao-juramentada)** — orquestração serverless de um documento do CRM até a assinatura digital.
 - Sistemas menores ponta a ponta: dashboards e relatórios, e front-end em React / Next.js.
 
-### O que estou estudando
+### Em preparação
 
-Python a fundo, sistemas distribuídos e fundamentos de CS — para sair de "fazer funcionar" e passar a entender o sistema linha por linha. Aprendo construindo; uso Claude Code, Cursor e outras ferramentas do mercado como aceleradores, não como muleta.
+- **AWS Certified Solutions Architect**
+- **Microsoft Azure** — AZ-900 e AZ-104 (a operação que mantenho migrou para Azure)
+- Aprofundando **Python** e **TypeScript**; **Go** na sequência
 
 ### Stack
 
