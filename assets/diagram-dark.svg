@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="920" height="250" role="img" aria-label="Arquitetura serverless event-driven: webhook entra pelo API Gateway, vai para uma fila SQS (com DLQ), é processado por um Worker Lambda idempotente que usa DynamoDB e S3, e atualiza o CRM via REST.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" width="920" height="250" role="img" aria-label="Arquitetura serverless event-driven animada: um evento percorre webhook, API Gateway, fila SQS (com DLQ), Worker Lambda idempotente que usa DynamoDB e S3, e atualiza o CRM via REST. Um patinho observa o Worker (rubber duck debugging).">
   <defs>
     <style>
       .name  { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; fill: #c9d1d9; }
@@ -12,121 +12,101 @@
       .icoc  { fill: none; stroke: #e3873c; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
       .conn  { fill: none; stroke: #444c56; stroke-width: 1.6; }
       .dash  { fill: none; stroke: #444c56; stroke-width: 1.4; stroke-dasharray: 3 4; }
+
+      .an { animation-duration: 5.5s; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+      .pa { animation-name: ka; } .ps { animation-name: ks; } .pw { animation-name: kw; } .pc { animation-name: kc; }
+      @keyframes ka { 0%,6%{stroke:#30363d} 12%{stroke:#e3873c} 20%,100%{stroke:#30363d} }
+      @keyframes ks { 0%,27%{stroke:#30363d} 33%{stroke:#e3873c} 41%,100%{stroke:#30363d} }
+      @keyframes kw { 0%,48%{stroke:#e3873c} 54%{stroke:#f7b574} 62%,100%{stroke:#e3873c} }
+      @keyframes kc { 0%,92%{stroke:#30363d} 98%{stroke:#e3873c} 100%{stroke:#30363d} }
+
+      .packet { animation: travel 5.5s ease-in-out infinite; }
+      @keyframes travel {
+        0%   { transform: translate(0,0);     opacity: 0; }
+        7%   { opacity: 1; }
+        93%  { opacity: 1; }
+        100% { transform: translate(660px,0); opacity: 0; }
+      }
     </style>
-    <pattern id="grid" width="23" height="23" patternUnits="userSpaceOnUse">
-      <circle cx="1.5" cy="1.5" r="0.9" fill="#1b2330"/>
-    </pattern>
-    <clipPath id="cardClip"><rect x="1" y="1" width="918" height="248" rx="15"/></clipPath>
-    <marker id="arrow" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto">
-      <path d="M0 0 L6 3 L0 6 Z" fill="#444c56"/>
-    </marker>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#000000" flood-opacity="0.45"/>
-    </filter>
+    <pattern id="gridD" width="23" height="23" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="0.9" fill="#1b2330"/></pattern>
+    <clipPath id="clipD"><rect x="1" y="1" width="918" height="248" rx="15"/></clipPath>
+    <marker id="arrD" markerWidth="7" markerHeight="7" refX="5.5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#444c56"/></marker>
+    <filter id="shD" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#000000" flood-opacity="0.45"/></filter>
+    <filter id="glowD" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   </defs>
 
   <rect x="0.5" y="0.5" width="919" height="249" rx="15.5" fill="#0d1117" stroke="#30363d"/>
-  <g clip-path="url(#cardClip)"><rect x="1" y="1" width="918" height="248" fill="url(#grid)"/></g>
+  <g clip-path="url(#clipD)"><rect x="1" y="1" width="918" height="248" fill="url(#gridD)"/></g>
 
   <text class="kick" x="26" y="32">EVENT-DRIVEN · SERVERLESS · AWS</text>
 
-  <!-- ingress -->
   <text class="edge" x="30" y="86" fill="#768390">webhook</text>
-  <line class="conn" x1="84" y1="98" x2="118" y2="98" marker-end="url(#arrow)"/>
-
-  <!-- spine connectors -->
-  <line class="conn" x1="220" y1="98" x2="252" y2="98" marker-end="url(#arrow)"/>
-  <line class="conn" x1="356" y1="98" x2="388" y2="98" marker-end="url(#arrow)"/>
-  <line class="conn" x1="500" y1="98" x2="700" y2="98" marker-end="url(#arrow)"/>
+  <line class="conn" x1="84" y1="98" x2="118" y2="98" marker-end="url(#arrD)"/>
+  <line class="conn" x1="220" y1="98" x2="252" y2="98" marker-end="url(#arrD)"/>
+  <line class="conn" x1="356" y1="98" x2="388" y2="98" marker-end="url(#arrD)"/>
+  <line class="conn" x1="500" y1="98" x2="700" y2="98" marker-end="url(#arrD)"/>
   <text class="edge" x="600" y="90" text-anchor="middle">crm.deal.update</text>
 
-  <!-- branch: SQS -> DLQ -->
-  <line class="dash" x1="288" y1="124" x2="288" y2="176" marker-end="url(#arrow)"/>
+  <line class="dash" x1="288" y1="124" x2="288" y2="176" marker-end="url(#arrD)"/>
   <text class="cap" x="298" y="156" fill="#636c76">on erro</text>
+  <path class="conn" d="M452 128 L452 176" marker-end="url(#arrD)"/>
+  <path class="conn" d="M468 122 C520 150 520 150 548 176" marker-end="url(#arrD)"/>
 
-  <!-- branch: Worker -> stores -->
-  <path class="conn" d="M452 128 L452 176" marker-end="url(#arrow)"/>
-  <path class="conn" d="M468 122 C520 150 520 150 548 176" marker-end="url(#arrow)"/>
-
-  <!-- API Gateway -->
-  <g transform="translate(120,74)" filter="url(#shadow)">
-    <rect class="node" width="100" height="48" rx="10"/>
-    <g class="ico" transform="translate(15,15)">
-      <path d="M7 2 L2 9 L7 16"/><path d="M12 2 L17 9 L12 16"/>
-    </g>
+  <g transform="translate(120,74)" filter="url(#shD)">
+    <rect class="node an pa" width="100" height="48" rx="10"/>
+    <g class="ico" transform="translate(15,15)"><path d="M7 2 L2 9 L7 16"/><path d="M12 2 L17 9 L12 16"/></g>
     <text class="name" x="40" y="29">API GW</text>
   </g>
   <text class="cap" x="170" y="138" text-anchor="middle">HTTP · BEARER</text>
 
-  <!-- SQS -->
-  <g transform="translate(252,74)" filter="url(#shadow)">
-    <rect class="node" width="104" height="48" rx="10"/>
-    <g class="ico" transform="translate(15,15)">
-      <rect x="0" y="1"  width="17" height="3.4" rx="1.4"/>
-      <rect x="0" y="7"  width="17" height="3.4" rx="1.4"/>
-      <rect x="0" y="13" width="17" height="3.4" rx="1.4"/>
-    </g>
+  <g transform="translate(252,74)" filter="url(#shD)">
+    <rect class="node an ps" width="104" height="48" rx="10"/>
+    <g class="ico" transform="translate(15,15)"><rect x="0" y="1" width="17" height="3.4" rx="1.4"/><rect x="0" y="7" width="17" height="3.4" rx="1.4"/><rect x="0" y="13" width="17" height="3.4" rx="1.4"/></g>
     <text class="name" x="40" y="29">SQS</text>
   </g>
   <text class="cap" x="304" y="138" text-anchor="middle">BATCH · RETRY</text>
 
-  <!-- Worker Lambda (core) -->
-  <g transform="translate(388,70)" filter="url(#shadow)">
-    <rect class="core" width="112" height="56" rx="11"/>
-    <g class="icoc" transform="translate(16,19)">
-      <rect x="3" y="3" width="12" height="12" rx="2.5"/>
-      <rect x="6.5" y="6.5" width="5" height="5" rx="1"/>
-      <path d="M1 7 L3 7 M1 11 L3 11 M15 7 L17 7 M15 11 L17 11"/>
-      <path d="M7 1 L7 3 M11 1 L11 3 M7 15 L7 17 M11 15 L11 17"/>
-    </g>
+  <g transform="translate(388,70)" filter="url(#shD)">
+    <rect class="core an pw" width="112" height="56" rx="11"/>
+    <g class="icoc" transform="translate(16,19)"><rect x="3" y="3" width="12" height="12" rx="2.5"/><rect x="6.5" y="6.5" width="5" height="5" rx="1"/><path d="M1 7 L3 7 M1 11 L3 11 M15 7 L17 7 M15 11 L17 11"/><path d="M7 1 L7 3 M11 1 L11 3 M7 15 L7 17 M11 15 L11 17"/></g>
     <text class="name" x="42" y="27" fill="#f0c896">Worker λ</text>
     <text class="cap" x="42" y="42" fill="#8b7355">IDEMPOTENTE</text>
   </g>
 
-  <!-- CRM -->
-  <g transform="translate(700,74)" filter="url(#shadow)">
-    <rect class="node" width="96" height="48" rx="10"/>
-    <g class="ico" transform="translate(15,15)">
-      <rect x="1" y="3" width="16" height="13" rx="2"/>
-      <circle cx="5.5" cy="8.5" r="2"/>
-      <path d="M10 7 L15 7 M10 10.5 L15 10.5 M10 14 L13.5 14"/>
-    </g>
+  <!-- easter egg: patinho debugando o Worker (rubber duck debugging) -->
+  <g transform="translate(470,51)">
+    <ellipse cx="9" cy="12" rx="8" ry="5" fill="#f5c542"/>
+    <circle cx="4" cy="7" r="4.2" fill="#f5c542"/>
+    <path d="M1 6 L-3 7.4 L1 8.8 Z" fill="#e8920f"/>
+    <path d="M8 11 q4 -2.5 7.5 -0.5" fill="none" stroke="#d99a1f" stroke-width="1"/>
+    <circle cx="3.2" cy="6" r="0.85" fill="#1b1b1b"/>
+  </g>
+
+  <g transform="translate(700,74)" filter="url(#shD)">
+    <rect class="node an pc" width="96" height="48" rx="10"/>
+    <g class="ico" transform="translate(15,15)"><rect x="1" y="3" width="16" height="13" rx="2"/><circle cx="5.5" cy="8.5" r="2"/><path d="M10 7 L15 7 M10 10.5 L15 10.5 M10 14 L13.5 14"/></g>
     <text class="name" x="40" y="29">CRM</text>
   </g>
   <text class="cap" x="748" y="138" text-anchor="middle">REST API</text>
 
-  <!-- DLQ -->
-  <g transform="translate(244,176)" filter="url(#shadow)">
+  <g transform="translate(244,176)" filter="url(#shD)">
     <rect class="node" width="88" height="40" rx="9"/>
-    <g class="ico" transform="translate(12,11)">
-      <rect x="0" y="1"  width="13" height="2.6" rx="1"/>
-      <rect x="0" y="6"  width="13" height="2.6" rx="1"/>
-      <rect x="0" y="11" width="13" height="2.6" rx="1"/>
-    </g>
+    <g class="ico" transform="translate(12,11)"><rect x="0" y="1" width="13" height="2.6" rx="1"/><rect x="0" y="6" width="13" height="2.6" rx="1"/><rect x="0" y="11" width="13" height="2.6" rx="1"/></g>
     <text class="name2" x="32" y="25">DLQ</text>
   </g>
-
-  <!-- DynamoDB -->
-  <g transform="translate(406,176)" filter="url(#shadow)">
+  <g transform="translate(406,176)" filter="url(#shD)">
     <rect class="node" width="96" height="40" rx="9"/>
-    <g class="ico" transform="translate(12,10)">
-      <ellipse cx="8" cy="3" rx="6" ry="2"/>
-      <path d="M2 3 L2 15"/><path d="M14 3 L14 15"/>
-      <path d="M2 15 A6 2 0 0 0 14 15"/>
-      <path d="M2 9 A6 2 0 0 0 14 9"/>
-    </g>
+    <g class="ico" transform="translate(12,10)"><ellipse cx="8" cy="3" rx="6" ry="2"/><path d="M2 3 L2 15"/><path d="M14 3 L14 15"/><path d="M2 15 A6 2 0 0 0 14 15"/><path d="M2 9 A6 2 0 0 0 14 9"/></g>
     <text class="name2" x="32" y="25">DynamoDB</text>
   </g>
-
-  <!-- S3 -->
-  <g transform="translate(516,176)" filter="url(#shadow)">
+  <g transform="translate(516,176)" filter="url(#shD)">
     <rect class="node" width="72" height="40" rx="9"/>
-    <g class="ico" transform="translate(12,10)">
-      <ellipse cx="8" cy="3.5" rx="5.5" ry="1.8"/>
-      <path d="M2.5 3.5 L4 16 L12 16 L13.5 3.5"/>
-    </g>
+    <g class="ico" transform="translate(12,10)"><ellipse cx="8" cy="3.5" rx="5.5" ry="1.8"/><path d="M2.5 3.5 L4 16 L12 16 L13.5 3.5"/></g>
     <text class="name2" x="30" y="25">S3</text>
   </g>
+
+  <!-- evento viajando pelo pipeline -->
+  <g class="packet"><circle cx="88" cy="98" r="5" fill="#e3873c" filter="url(#glowD)"/></g>
 
   <text class="cap" x="894" y="234" text-anchor="end" fill="#4d555e">TypeScript · AWS CDK</text>
 </svg>

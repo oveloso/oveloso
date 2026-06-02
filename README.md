@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/oveloso/oveloso/main/assets/duck.svg" width="76" alt="pato — marca pessoal (rubber duck debugging)">
-
 # Lucas Velôso
 **Automation Engineer · Backend**
 
