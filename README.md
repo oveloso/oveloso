@@ -2,6 +2,8 @@
 
 # Lucas Velôso
 
+**Automation Engineer** · Backend · AWS
+
 <a href="https://github.com/oveloso">
   <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=680&lines=Entendo+o+problema+antes+de+abrir+o+editor;Backend+serverless+%E2%80%94+rumo+%C3%A0+arquitetura;Penso+em+evento%2C+fila%2C+retry%2C+o+que+quebra+%C3%A0s+3h" alt="quem sou"/>
 </a>
