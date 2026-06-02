@@ -34,10 +34,7 @@ Início de carreira, com integrações reais em produção.
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/output/github-snake-dark.svg">
-  <img alt="snake comendo o contribution graph" src="https://raw.githubusercontent.com/oveloso/oveloso/output/github-snake.svg">
-</picture>
+<img alt="Pac-Man comendo o meu contribution graph" src="https://raw.githubusercontent.com/oveloso/oveloso/output/pacman-contribution-graph.svg" width="100%">
 
 </div>
 
