@@ -1,42 +1,32 @@
 <div align="center">
 
 # Lucas Velôso
-
-**Automation Engineer** · Backend · AWS
-
-<a href="https://github.com/oveloso">
-  <img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=20&pause=1200&color=58A6FF&center=true&vCenter=true&width=680&lines=Entendo+o+problema+antes+de+abrir+o+editor;Backend+serverless+%E2%80%94+rumo+%C3%A0+arquitetura;Penso+em+evento%2C+fila%2C+retry%2C+o+que+quebra+%C3%A0s+3h" alt="quem sou"/>
-</a>
+**Automation Engineer · Backend**
 
 </div>
 
-Tenho 24 anos e 2 na área. Entrei pela porta da **operação** — mapeando processo, entendendo o que estava quebrado antes de escrever qualquer linha — e fui parar na engenharia. Hoje construo backend serverless e estou indo fundo em Python, mirando arquitetura de software.
+Desenvolvedor focado em backend e **integração entre sistemas**. O que faço melhor hoje é conectar sistemas que não foram feitos para conversar — CRMs, APIs externas, serviços de assinatura, storage — em pipelines serverless na AWS que aguentam volume e tratam falha de forma controlada.
 
-O que me move não é a ferramenta, é o **problema**. Antes do editor, eu quero saber o que falha no processo e por quê. Foi assim que aprendi AWS: não como uma lista de serviços, mas como o jeito de fazer um sistema aguentar o mundo real.
+Início de carreira, com integrações reais já em produção. Estou indo mais fundo em **Python** e **JavaScript/TypeScript**, caminhando para full stack — e Go mais à frente.
 
-### Como eu penso um sistema
+### O que construí
 
-```
-evento entra        →  API Gateway
-processa            →  Lambda  (x86 ou Graviton/ARM pra cortar custo)
-guarda estado       →  DynamoDB / S3
-o que falha         →  DLQ + retry  (nada se perde calado)
-fica observável     →  CloudWatch + alarmes  (eu descubro antes do cliente)
-chega rápido        →  CloudFront na borda
-não precisa de código?  →  n8n
-```
+- **[serverless-crm-integration](https://github.com/oveloso/serverless-crm-integration)** — integração multi-sistema orientada a eventos na AWS (Lambda, SQS, DynamoDB). Circuit breaker, rate limiter global, idempotência, 400+ testes. *Código real, em TypeScript.*
+- **[analise-cidadania-italiana](https://github.com/oveloso/analise-cidadania-italiana)** — aplicação com IA (RAG + agentes) para triagem de documentação.
+- **[pipeline-traducao-juramentada](https://github.com/oveloso/pipeline-traducao-juramentada)** — orquestração serverless de um documento do CRM até a assinatura digital.
+- Sistemas menores ponta a ponta: dashboards e relatórios, e front-end em React / Next.js.
 
-Quando o problema pede, troco de nuvem (GCP) ou subo uma automação no lugar de um serviço. A decisão é do problema, não da ferramenta favorita.
+### O que estou estudando
 
-### No que estou trabalhando
+Python a fundo, sistemas distribuídos e fundamentos de CS — para sair de "fazer funcionar" e passar a entender o sistema linha por linha. Aprendo construindo; uso Claude Code, Cursor e outras ferramentas do mercado como aceleradores, não como muleta.
 
-- **[serverless-crm-integration](https://github.com/oveloso/serverless-crm-integration)** — pipeline serverless orientado a eventos (Lambda · SQS · DynamoDB). Circuit breaker, rate limiter global e idempotência, com 400+ testes passando. *Código real, em TypeScript.*
-- **[pipeline-traducao-juramentada](https://github.com/oveloso/pipeline-traducao-juramentada)** — um documento sai do CRM e volta assinado, sem ninguém no meio. Cada etapa pensada em torno de "o que acontece quando falha".
-- **[analise-cidadania-italiana](https://github.com/oveloso/analise-cidadania-italiana)** — IA que faz a triagem de uma pasta de cidadania: horas de conferência viram minutos.
+### Stack
 
-### Onde estou indo
-
-Backend forte agora, arquitetura de software depois. Estudando Python a fundo e sistemas distribuídos — quero ser o dev que entende o sistema linha por linha, não o que só faz funcionar.
+- **Backend:** Python, Node.js, TypeScript
+- **Serverless / AWS:** Lambda, API Gateway, SQS, DynamoDB, S3, Secrets Manager, CloudWatch
+- **Dados / IA:** RAG + agentes (Dify), Supabase, BigQuery
+- **Front-end:** React, Next.js
+- **IaC:** AWS CDK, Terraform
 
 <div align="center">
 
