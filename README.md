@@ -35,12 +35,16 @@ Início de carreira, com integrações reais em produção.
 - **Front-end:** React, Next.js
 - **IaC:** AWS CDK, Terraform
 
+### Atividade
+
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/oveloso/oveloso/output/pacman-contribution-graph-dark.svg">
-  <img alt="Pac-Man comendo o meu contribution graph" src="https://raw.githubusercontent.com/oveloso/oveloso/output/pacman-contribution-graph.svg" width="100%">
+  <img alt="Pac-Man comendo meu histórico de commits — cada célula é um dia de contribuição" src="https://raw.githubusercontent.com/oveloso/oveloso/output/pacman-contribution-graph.svg" width="100%">
 </picture>
+
+<sub><i>cada célula é um dia de commit · os power pellets são os dias de pico</i></sub>
 
 </div>
 
@@ -48,8 +52,10 @@ Início de carreira, com integrações reais em produção.
 
 <div align="center">
 
-[![CV](https://img.shields.io/badge/CV-1F6FEB?style=flat-square&logo=readme&logoColor=white)](https://github.com/oveloso/cv)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-veloso-pergentino)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:lucasvelosopergentino@gmail.com)
+[![CV](https://img.shields.io/badge/CV-24292f?style=flat-square&logo=readme&logoColor=white)](https://github.com/oveloso/cv)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-24292f?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-veloso-pergentino)
+[![Email](https://img.shields.io/badge/Email-24292f?style=flat-square&logo=gmail&logoColor=white)](mailto:lucasvelosopergentino@gmail.com)
+
+<sub><code>oveloso</code> · backend &amp; integração · São Paulo, BR</sub>
 
 </div>
