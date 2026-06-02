@@ -26,8 +26,8 @@
 
       .errpkt { animation: errdrop 6s ease-in-out infinite; }
       @keyframes errdrop { 0%,54%{opacity:0;transform:translate(0,0)} 59%{opacity:1;transform:translate(0,0)} 76%{opacity:1;transform:translate(0,50px)} 90%{opacity:1;transform:translate(0,50px)} 96%,100%{opacity:0;transform:translate(0,50px)} }
-      .errx { animation: errpop 6s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-      @keyframes errpop { 0%,74%{opacity:0;transform:scale(.4)} 80%{opacity:1;transform:scale(1)} 92%{opacity:1;transform:scale(1)} 97%,100%{opacity:0;transform:scale(1)} }
+      .errx { animation: errpop 6s ease-in-out infinite; }
+      @keyframes errpop { 0%,74%{opacity:0;transform:scale(.3)} 80%{opacity:1;transform:scale(1)} 92%{opacity:1;transform:scale(1)} 97%,100%{opacity:0;transform:scale(1)} }
       .errlbl { animation: errshow 6s ease-in-out infinite; }
       @keyframes errshow { 0%,76%{opacity:0} 82%{opacity:1} 93%,100%{opacity:0} }
       .dlqx { animation: dlqflash 6s ease-in-out infinite; }
@@ -57,6 +57,9 @@
   <text class="cap" x="298" y="156" fill="#636c76">on erro</text>
   <path class="conn" d="M452 128 L452 176" marker-end="url(#arrD)"/>
   <path class="conn" d="M468 122 C520 150 520 150 548 176" marker-end="url(#arrD)"/>
+
+  <!-- evento OK viaja pelo fio (passa POR TRÁS dos nós) -->
+  <g class="packet"><circle cx="88" cy="98" r="5" fill="#e6edf3" filter="url(#glowD)"/></g>
 
   <g transform="translate(120,74)" filter="url(#shD)">
     <rect class="node an pa" width="100" height="48" rx="10"/>
@@ -100,7 +103,6 @@
     <g class="ico" transform="translate(12,11)"><rect x="0" y="1" width="13" height="2.6" rx="1"/><rect x="0" y="6" width="13" height="2.6" rx="1"/><rect x="0" y="11" width="13" height="2.6" rx="1"/></g>
     <text class="name2" x="32" y="25">DLQ</text>
   </g>
-  <text class="errt errlbl" x="346" y="200">falhou → DLQ → retry</text>
 
   <g transform="translate(406,176)" filter="url(#shD)">
     <rect class="node" width="96" height="40" rx="9"/>
@@ -113,15 +115,10 @@
     <text class="name2" x="30" y="25">S3</text>
   </g>
 
-  <!-- evento OK percorrendo o pipeline -->
-  <g class="packet"><circle cx="88" cy="98" r="5" fill="#e6edf3" filter="url(#glowD)"/></g>
-  <!-- evento que FALHA e cai na DLQ -->
+  <!-- evento que FALHA: cai na DLQ (vermelho, POR CIMA), badge ✕ estoura, label -->
   <g class="errpkt"><circle cx="288" cy="124" r="5.5" fill="#e5534b" filter="url(#glowR)"/></g>
-  <!-- badge de erro estourando na DLQ -->
-  <g class="errx" transform="translate(330,178)">
-    <circle r="8" fill="#e5534b"/>
-    <path d="M-3 -3 L3 3 M3 -3 L-3 3" stroke="#0d1117" stroke-width="1.8" stroke-linecap="round"/>
-  </g>
+  <g transform="translate(330,178)"><g class="errx"><circle r="8" fill="#e5534b"/><path d="M-3 -3 L3 3 M3 -3 L-3 3" stroke="#0d1117" stroke-width="1.8" stroke-linecap="round"/></g></g>
+  <text class="errt errlbl" x="346" y="200">falhou → DLQ → retry</text>
 
   <text class="cap" x="894" y="234" text-anchor="end" fill="#4d555e">oveloso · TypeScript · AWS CDK</text>
 </svg>
